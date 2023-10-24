@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+  <title>Formulário de Informações</title>
+</head>
+<body>
+
+<form id="formularioNome">
+  <label for="nome">Informe seu nome: </label>
+  <input type="text" id="nome" required>
+  <button type="button" onclick="guardarNome()">Guardar</button>
+</form>
+
+<form id="formularioIdade" style="display: none;">
+  <label for="idade">Informe sua idade: </label>
+  <input type="number" id="idade" required>
+  <button type="button" onclick="exibirInformacoes()">Exibir</button>
+</form>
+
+<script>
+let nome, idade;
+
+function guardarNome() {
+  nome = document.getElementById('nome').value;
+  document.getElementById('formularioNome').style.display = 'none';
+  document.getElementById('formularioIdade').style.display = 'block';
+}
+
+function exibirInformacoes() {
+  idade = document.getElementById('idade').value;
+  const mensagem = `Seu nome é ${nome} e você tem ${idade} anos.`;
+  alert(mensagem);
+}
+</script>
+
+</body>
+</html>
+
+   
+  
+
+<body>
+    
+</body>
+</html>
