@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PA</title>
+    <script>
+
+        function gerarPA(primeiroTermo, razao, posicaoFinal) {
+            var pa = [primeiroTermo];
+            for (var i = 1; i < posicaoFinal; i++) {
+                var proximoTermo = pa[i - 1] + razao;
+                pa.push(proximoTermo);
+            }
+            return pa;
+        }
+
+        var primeiroTermo = parseFloat(prompt("Digite o primeiro termo da PA:"));
+        var razao = parseFloat(prompt("Digite a razão da PA:"));
+        var posicaoFinal = parseInt(prompt("Digite a posição do termo final:"));
+
+        var paGerada = gerarPA(primeiroTermo, razao, posicaoFinal);
+        document.write("A progressão aritmética gerada é: " + paGerada);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
